@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>change color and size</title>
+</head>
+<body>
+
+    <p id="message">This is the regular Text.</p>
+    <button id="changeTextBtn">Click to Change Text</button>
+
+    <script>
+        const messageElement = document.getElementById("message");
+        const changeButton = document.getElementById("changeTextBtn");
+        changeButton.addEventListener("click", function() {
+            messageElement.textContent = "The text color and size was changed by a button click!";
+            messageElement.style.color = "blue";
+            messageElement.style.fontSize = "x-large";
+        });
+    </script>
+
+</body>
+</html>

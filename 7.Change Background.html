@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>change the background</title>
+</head>
+<body>
+
+    <h1 id="bgc">This is white black.</h1>
+    <button id="changeTextBtn">Click to Change Background</button>
+
+    <script>
+        const messageElement = document.getElementById("bgc");
+        const changeButton = document.getElementById("changeTextBtn");
+        changeButton.addEventListener("click", function() {
+            messageElement.textContent = "The background color was changed by a button click!";
+            messageElement.style.color = "white";
+            document.body.style.background = "black";
+        });
+    </script>
+
+</body>
+</html>

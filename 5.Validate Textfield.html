@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Field Validation</title>
+</head>
+<body>
+
+  <h2>Validate Text Field</h2>
+
+  <form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" />
+    <br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("myForm");
+    const nameField = document.getElementById("name");
+
+    form.addEventListener("submit", function(event) {
+      const nameValue = nameField.value.trim(); // Remove whitespace
+
+      if (nameValue === "") {
+        alert("Name field cannot be empty!");
+        event.preventDefault(); // Stop form from submitting
+      } else {
+        alert("Form submitted successfully!");
+        // Optionally, you can allow the form to submit
+        // or handle submission with JavaScript
+      }
+    });
+  </script>
+
+</body>
+</html>

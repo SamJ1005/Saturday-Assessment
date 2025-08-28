@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add List Items</title>
+</head>
+<body>
+
+  <h2>My List</h2>
+
+  <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+
+  <input type="text" id="item" placeholder="Enter new item" />
+  <button id="addItem">Add Item</button>
+
+  <script>
+    const addItemBtn = document.getElementById("addItem");
+    const itemInput = document.getElementById("item");
+    const myList = document.getElementById("myList");
+
+    addItemBtn.addEventListener("click", function() {
+      const newItemText = itemInput.value.trim();
+
+      if (newItemText !== "") {
+        const newListItem = document.createElement("li");
+        newListItem.textContent = newItemText;
+        myList.appendChild(newListItem);
+        itemInput.value = ""; 
+        itemInput.focus();  
+      }
+    });
+  </script>
+
+</body>
+</html>

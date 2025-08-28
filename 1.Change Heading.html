@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>change Text</title>
+</head>
+<body>
+
+    <h1 id="message">This is the Heading.</h1>
+    <button id="changeTextBtn">Click to Change Text</button>
+
+    <script>
+        const messageElement = document.getElementById("message");
+        const changeButton = document.getElementById("changeTextBtn");
+        changeButton.addEventListener("click", function() {
+            messageElement.textContent = "The heading text was changed by a button click!";
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Mouse Hover</title>
+</head>
+<body>
+    <img id="myImage" src="Computer.png" onmouseover="changeImage()" onmouseout="restoreImage()" width="200">
+    <script>
+        function changeImage() {
+            document.getElementById("myImage").src = "Fono Logo.png";
+        }
+
+        function restoreImage() {
+            document.getElementById("myImage").src = "Computer.png";
+        }
+    </script>
+</body>
+</html>
